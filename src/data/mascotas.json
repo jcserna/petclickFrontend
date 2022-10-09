@@ -1,0 +1,22 @@
+{
+    "mascotas":[
+        {
+            "id":1,
+            "nombre":"Max",
+            "especie":"Canino",
+            "raza":"PitBull",
+            "fechaN":"2015-05-06",
+            "genero": "Macho",
+            "img":"MaxImg"
+        },
+        {
+            "id":2,
+            "nombre":"Tom",
+            "especie":"Felino",
+            "raza":"Persa",
+            "fechaN":"2012-05-06",
+            "genero": "Hembra",
+            "img":"TomImg"
+        }
+    ]
+}

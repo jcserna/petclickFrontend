@@ -1,0 +1,154 @@
+
+.contHead{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.contHead h1{
+    color: #AF7ED9;
+}
+.contHead .contPerfil{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contHead .contPerfil .imgPerfil{
+    width: 25%;
+    height: 45%;
+    margin-bottom: 5px;
+    border-radius: 55px;
+    background-image: url('../img/christopher-campbell-rDEOVtE7vOs-unsplash.jpg');
+    background-size: 200%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.contHead .contPerfil .imgPerfil:hover{
+    width: 28%;
+    height: 48%;
+    border: 2px solid var(--three-color);
+}
+.contHead .contPerfil h4{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.contHead .contPerfil h4 p{
+    color: var(--three-color);
+}
+.contHead .contPerfil .optnFalse{
+    display: none;
+}
+
+.contHead .contPerfil .optnTrue{
+    width: 20%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    border-radius: 10px;
+    animation: animMenu 0.4s ease-in;
+    background: linear-gradient(180deg, rgba(126, 170, 217, 0.5) 0%, rgba(152, 150, 240, 0.5) 100%);
+    backdrop-filter: blur(35px);
+    box-shadow: 10px 7px 4px rgba(0, 0, 0, 0.25);
+}
+.contHead .contPerfil .optnTrue h3{
+    color: #AF7ED9;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contHead .contPerfil .optnTrue h3 p{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(254, 8, 8, 0.5);
+    border-radius: 55px;
+    color: white;
+    right: 3%;
+    top: 3%;
+    font-size: 60%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.contHead .contPerfil .optnTrue h3 p:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(254, 8, 8, 0.5);
+    border: 1px solid rgba(254, 8, 8, 0.5);
+}
+.contHead .contPerfil .optnTrue .body{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.contHead .contPerfil .optnTrue .body p{
+    width: max-content;
+}
+.contHead .contPerfil .optnTrue .body input{
+    margin-left: 40px;
+    width: 100px;
+    height: 100%;
+    border: none;
+    text-align: center;
+    transition: width 0.2s;
+}
+.contHead .contPerfil .optnTrue .body input:hover{
+    width: 130px;
+    border: 1px solid var(--three-color);
+}
+.contHead .contPerfil .optnTrue .footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.contHead .contPerfil .optnTrue .footer button{
+    width: 40%;
+    height: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--three-color);
+    color: aliceblue;
+    transition: all 0.2s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.contHead .contPerfil .optnTrue .footer button:hover{
+    width: 50%;
+    background-color: transparent;
+    color: var(--three-color);
+    border: 2px solid var(--three-color);
+}
+@keyframes animMenu {
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 4%, 0 3%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+}

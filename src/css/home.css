@@ -1,0 +1,103 @@
+.contHome{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contBody{
+    width: 87%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: animHome 0.5s ease-in;
+}
+.contBody .body{
+    width: 90%;
+    height: 75%;
+}
+.contNavBar{
+    width: 13%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-color);
+}
+.contNavLogo{
+    background-image: url('../img/Logo-removebg-preview.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 22%;
+    margin-bottom: 50px;
+}
+.contButtons{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.contButtons .btn{
+    width: 100%;
+    height: 10%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+.contButtons .btn .icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.contButtons .active{
+    background-color: var(--secondary-color);
+}
+.contButtons .active .icon{
+    color: var(--three-color);
+}
+.contButtons .btn:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+.contCerrarSesion{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contCerrarSesion button{
+    width: 50%;
+    height: 40%;
+    border: none;
+    border-radius: 5px;
+    background: rgba(254, 8, 8, 0.5);
+    color: aliceblue;
+    transition: all 0.2s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contCerrarSesion button:hover{
+    border: 2px solid rgba(254, 8, 8, 0.5);
+    background: transparent;
+    width: 60%;
+    color: rgba(254, 8, 8, 0.5);
+    cursor: pointer;
+}
+@keyframes animHome {
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100%{
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
