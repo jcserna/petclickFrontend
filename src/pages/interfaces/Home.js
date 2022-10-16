@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Mascotas from '../../components/Mascotas';
 import { AiFillCalendar, AiFillHome, AiFillGitlab } from "react-icons/ai";
 import Calendario from '../../components/Calendar';
+
 function Home() {
     const cookies = new Cookies();
     function cerrarSesion() {
