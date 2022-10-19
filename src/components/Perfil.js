@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
+
+import Cookies from 'universal-cookie';
+
 function Perfil() {
+    
+    const cookies = new Cookies();
+    
+    const [userID] = useState(cookies.get('username'));
+
     var [menu, setMenu] = useState(false);
     function chandleTrue() {
         setMenu(true)
@@ -9,7 +17,7 @@ function Perfil() {
     }
     return ( 
         <div className="contPerfil">
-            <h4>Khate 
+            <h4>{userID} 
                 <p>Ver Perfil</p>
             </h4>
             <div className='imgPerfil' onClick={chandleTrue}>

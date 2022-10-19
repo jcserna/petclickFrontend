@@ -1,15 +1,36 @@
 import '../../css/login.css';
 import React from 'react';
 import {useForm } from'react-hook-form';
+
+import axios from 'axios';
+import Cookies from 'universal-cookie';
 function Login() {
 
+    const cookies = new Cookies();
     const {register, handleSubmit} = useForm();
-    let url = 'https://petclick-db.herokuapp.com/users';
-
+    
+    let url = 'http://localhost:3001/users';
     function conexionDb(db) {
-        fetch(url)
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+        axios.get(url)
+        .then((res)=>{
+            for (let index = 0; index < res.data.length; index++) {
+                if (res.data[index].username===db.user && res.data[index].password===db.password ) {
+                    cookies.set('username', db.user, {path:"/"});
+                    cookies.set('id', res.data[index].iduser, {path:"/"})
+                    cookies.set('rol', res.data[index].userrol, {path:"/"})
+                    if (res.data[index].rol==="clinica") {
+                        window.location.href="./clinica";    
+                    }else{
+                        window.location.href="./home";
+                    }
+                    
+                } 
+            }
+        },
+        (error)=>{
+            console.error(error);
+        }
+        )
     }
 
     return ( 
@@ -24,7 +45,7 @@ function Login() {
                         </div>
                     </div>
                     <div className='bodyForm'>
-                        <form className='formInput' onSubmit={ handleSubmit(conexionDb)}>
+                        <form className='formInput' onSubmit={handleSubmit(conexionDb)}>
                             <div className='inputUser'>
                                 <p>User</p>
                                 <input type="text" {...register('user',{required:true})} />
