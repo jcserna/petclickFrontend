@@ -49,8 +49,11 @@ function Register() {
                                 <p>Ciudad*</p>
                                 <input type="text" {...register('ciudad',{required:true})} />
                             </div>
-                            <div className='inputButton'>
+                            <div className='inputButtonRegister'>
                                 <input type="submit" value="Registrarse" />
+                            </div>
+                            <div className='cancelRegister'>
+                                <input type="submit" value="Cancelar" />
                             </div>
                         </form>
                     </div>
